@@ -606,30 +606,51 @@ bool core::update_miner_block_template() {
 bool core::on_idle() {
   if (!m_starter_message_showed) {
     logger(INFO) << ENDL << "**********************************************************************" << ENDL                                                                                                    
-<< "BBBBBBBBBBBBBBBBB      SSSSSSSSSSSSSSS              CCCCCCCCCCCCC                   iiii                   " << ENDL
-<< "B::::::::::::::::B   SS:::::::::::::::S          CCC::::::::::::C                  i::::i                  " << ENDL
-<< "B::::::BBBBBB:::::B S:::::SSSSSS::::::S        CC:::::::::::::::C                   iiii                   " << ENDL
-<< "BB:::::B     B:::::BS:::::S     SSSSSSS       C:::::CCCCCCCC::::C                                          " << ENDL
-<< "  B::::B     B:::::BS:::::S                  C:::::C       CCCCCC   ooooooooooo   iiiiiiinnnn  nnnnnnnn    " << ENDL
-<< "  B::::B     B:::::BS:::::S                 C:::::C               oo:::::::::::oo i:::::in:::nn::::::::nn  " << ENDL
-<< "  B::::BBBBBB:::::B  S::::SSSS              C:::::C              o:::::::::::::::o i::::in::::::::::::::nn " << ENDL
-<< "  B:::::::::::::BB    SS::::::SSSSS         C:::::C              o:::::ooooo:::::o i::::inn:::::::::::::::n" << ENDL
-<< "  B::::BBBBBB:::::B     SSS::::::::SS       C:::::C              o::::o     o::::o i::::i  n:::::nnnn:::::n" << ENDL
-<< "  B::::B     B:::::B       SSSSSS::::S      C:::::C              o::::o     o::::o i::::i  n::::n    n::::n" << ENDL
-<< "  B::::B     B:::::B            S:::::S     C:::::C              o::::o     o::::o i::::i  n::::n    n::::n" << ENDL
-<< "  B::::B     B:::::B            S:::::S      C:::::C       CCCCCCo::::o     o::::o i::::i  n::::n    n::::n" << ENDL
-<< "BB:::::BBBBBB::::::BSSSSSSS     S:::::S       C:::::CCCCCCCC::::Co:::::ooooo:::::oi::::::i n::::n    n::::n" << ENDL
-<< "B:::::::::::::::::B S::::::SSSSSS:::::S        CC:::::::::::::::Co:::::::::::::::oi::::::i n::::n    n::::n" << ENDL
-<< "B::::::::::::::::B  S:::::::::::::::SS           CCC::::::::::::C oo:::::::::::oo i::::::i n::::n    n::::n" << ENDL    
-<< "BBBBBBBBBBBBBBBBB    SSSSSSSSSSSSSSS                CCCCCCCCCCCCC   ooooooooooo   iiiiiiii nnnnnn    nnnnnn" << ENDL                                                                                     
-<< ENDL                                                                                                           
-      << "The BS is synchronizing with the BS network. It may take up to several BS hours." << ENDL
+<< "                       .,MMMMMMMMMM:.                       " << ENDL
+<< "                     ~MMMMMMMMMMMMMMMMM.                    " << ENDL
+<< "                  .DMMMMMMMMMMMMMMMMMMMMM,.                 " << ENDL
+<< "                .$MMMMMMMMMMMMMMMMMMMMMMMMM.                " << ENDL
+<< "               .MMMMMMMMMMMMMMMMMMMMMMMMMMMM                " << ENDL
+<< "               MMMMMMMMMMMMMMMMMMMMMMMMMMMMMZ.              " << ENDL
+<< "             .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM               " << ENDL
+<< "            .+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.             " << ENDL
+<< "            .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,.            " << ENDL
+<< "             MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.            " << ENDL
+<< "            $MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM             " << ENDL
+<< "            MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.            " << ENDL
+<< "            MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.            " << ENDL
+<< "            .MMMMM:. ... .$MMMMMM8.  .   =MMMMM.            " << ENDL
+<< "             MMMM.         IMMMM$        ..MMM..            " << ENDL
+<< "             .MMM          ~MMMM~          MMO.             " << ENDL
+<< "            ..NMM          MMMMMM.        .NMM .            " << ENDL
+<< "            . MMM$.     ..MMM,MMMM.       +MMM.             " << ENDL
+<< "             .MMMMMN.. .DMMMM.~MMMMO . .OMMMMM.             " << ENDL
+<< "       77     +MMMMMMMMMMMMM.. =MMMMMMMMMMMMM.  ..+O .      " << ENDL
+<< "     +MMMM.   . 7MMMMMMMMMMM.   MMMMMMMMMN~     .MMMMN      " << ENDL
+<< "...8MMMMMMM.     .  ..MMMMMM  = MMMMMM7.        ZMMMMMMN,   " << ENDL
+<< ".MMMMMMMMMM=          DMMMMMMMMMMMMMMM..       ,MMMMMMMMMM+ " << ENDL
+<< ".MMMMMMMMMMMMMM:..    7MMMMMMMMMMMMMMM   . .NMMMMMMMMMMMMM, " << ENDL
+<< " .,DN+.IMMMMMMMMMMM~  NMM.MMM.MMM  MM8 ,MMMMMMMMMMMO ,DN=   " << ENDL
+<< "         ..=MMMMMMMMMMM?....   ... ~MMMMMMMMMMM7...         " << ENDL
+<< "            ...:MMMMMMMMMMMZ. .+MMMMMMMMMMM+....            " << ENDL
+<< "                ...,MMMMMMMMMMMMMMMMMMM~...                 " << ENDL
+<< "                    . .$MMMMMMMMMMMN   .                    " << ENDL
+<< "                 ..?MMMMMMMMMMMMMMMMMMMZ ..                 " << ENDL
+<< "               ZMMMMMMMMMMM=  .,MMMMMMMMMMMD..              " << ENDL
+<< "        ..IMMMMMMMMMMMM:         . .MMMMMMMMMMMMZ...    .   " << ENDL
+<< "MMMMMMMMMMMMMMMMMMM,..              . ..DMMMMMMMMMMMMMMMMMM " << ENDL
+<< "MMMMMMMMMMMMMMN..                        ...8MMMMMMMMMMMMMM7" << ENDL
+<< "$MMMMMMMMMD...                               . .ZMMMMMMMMMD." << ENDL
+<< "   MMMMMM.                                        MMMMMM:   " << ENDL
+<< "    MMMMM.                                       .7MMMM     " << ENDL
+<< ENDL                  
+      << "The Pirate network is synchronizing. It may take up to several hours, arrrrr." << ENDL
       << ENDL
-      << "You can set the level of BS through \"set_log <level>\" command*, where <level> is between 0 (no details) and 4 (very verbose)." << ENDL
+      << "You can set the pirate level through \"set_log <level>\" command*, where <level> is between 0 (no details) and 4 (very verbose)." << ENDL
       << ENDL
-      << "Use \"help\" command to see the list of available BS commands." << ENDL
+      << "Use \"help\" command to see the list of available Pirate commands." << ENDL
       << ENDL
-      << "BS Note: in case you need to interrupt this BS, use \"exit\" command. Otherwise, the current BS won't be saved." << ENDL
+      << "Arrrr: in case you need to interrupt the Pirate Ship, use \"exit\" command. Otherwise, the current booty won't be saved." << ENDL
       << "**********************************************************************";
     m_starter_message_showed = true;
   }
