@@ -28,18 +28,21 @@ In terminal after dependencies are installed, you can `cd` (change directory) to
 
 Copy & Paste in terminal.
 `git clone https://github.com/TheNodeCoin/PirateSilver.git`
-`cd  && make`
+`cd PirateSilver && make`
 
 Starting Pirate daemon.
 
 After the coin is 100% built, `cd build/release/src`.
-You can choose to run the Pirate Coin in the current terminal `./piratesilver`.  However, closing the terminal will shutdown the daemon.  Alternatively, you can run BS in screen `sudo screen ./bsCoin`.  This allows you to detach [ctrl+a d] the screen leaning it running while closing the terminal.  To reattach the screen simply open a terminal [ctrl+alt t] and type `sudo sreen -r`.
+You can choose to run the Pirate Coin in the current terminal `./piratesilver`.  However, closing the terminal will shutdown the daemon.  Alternatively, you can run BS in screen `sudo screen ./piratesilver`.  This allows you to detach [ctrl+a d] the screen leaning it running while closing the terminal.  To reattach the screen simply open a terminal [ctrl+alt t] and type `sudo sreen -r`.
 
 Congrats, You are now running a Pirate node.
 
 Build Overview:
 
 In order to build, you will have to change the directory to where the cloned git is located, and run `make`. The resulting executables can be found in the same directory under `build/release/src`.
+
+Starting wallet:
+`cd PirateSilver/build/release/src && ./simplewallet`.  Follow the instructions and type `help` for list of commands.  You can start mining in the daemon with `start_mining`.  Good luck!
 
 **Advanced options:**
 
