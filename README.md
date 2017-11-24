@@ -33,7 +33,7 @@ Copy & Paste in terminal.
 Starting Pirate daemon.
 
 After the coin is 100% built, `cd build/release/src`.
-You can choose to run the Pirate Coin in the current terminal `./piratesilver`.  However, closing the terminal will shutdown the daemon.  Alternatively, you can run BS in screen `sudo screen ./piratesilver`.  This allows you to detach [ctrl+a d] the screen leaning it running while closing the terminal.  To reattach the screen simply open a terminal [ctrl+alt t] and type `sudo sreen -r`.
+You can choose to run the Pirate Coin in the current terminal `./piratesilver`.  However, closing the terminal will shutdown the daemon.  Alternatively, you can run PS in screen `sudo screen ./piratesilver`.  This allows you to detach [ctrl+a d] the screen leaning it running while closing the terminal.  To reattach the screen simply open a terminal [ctrl+alt t] and type `sudo sreen -r`.
 
 Congrats, You are now running a Pirate node.
 
