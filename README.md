@@ -1,4 +1,7 @@
 ## Snatching some Pirate Silver booty. Arrrrrrrrr! #
+![alt text][logo]
+
+[logo]: http://www.yim778.com/data/out/57/825665.jpg "ARRRRRR"
 
 ### On Linux
 
